@@ -99,26 +99,6 @@ function Footer() {
           <p className="text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
             © {new Date().getFullYear()} NGUYEN DUY THANH. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm">
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-            >
-              Terms of Service
-            </a>
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-            >
-              Imprint
-            </a>
-          </div>
         </div>
       </div>
     </footer>
