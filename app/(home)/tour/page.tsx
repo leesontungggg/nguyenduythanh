@@ -31,7 +31,7 @@ export default function Tour() {
       {/* Main Content */}
       <main className="flex-1">
         {/* Hero Slider */}
-        <section className="relative h-screen bg-[url('/hero.jpg')] bg-fixed bg-cover bg-center flex items-center justify-center text-white uppercase md:text-5xl text-3xl font-bold">
+        <section className="relative h-screen bg-[url('/hero.jpg')] bg-fixed bg-cover bg-[position:75%_0%] md:bg-center flex items-center justify-center text-white uppercase md:text-5xl text-3xl font-bold">
           Tour
         </section>
 

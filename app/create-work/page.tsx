@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export default function BlogDashboard() {
-  const [blogs, setBlogs] = useState<Work[]>([]);
+  const [works, setWorks] = useState<Work[]>([]);
   const [view, setView] = useState<"list" | "create" | "edit" | "preview">(
     "list"
   );
@@ -40,7 +40,7 @@ export default function BlogDashboard() {
       const response = await fetch("/api/get-works");
       const data = await response.json();
       if (data.success) {
-        setBlogs(data.data);
+        setWorks(data.data);
       } else {
         console.error("Failed to fetch show times");
       }
@@ -62,7 +62,7 @@ export default function BlogDashboard() {
       if (data.success) {
         toast.success("Work created successfully!");
         fetchWorks();
-        // setBlogs([...blogs, currentWork]);
+        // setWorks([...blogs, currentWork]);
         setcurrentWork({
           id: "",
           title: "",
@@ -90,7 +90,7 @@ export default function BlogDashboard() {
       createdAt: new Date().toISOString(),
     };
 
-    // setBlogs([newBlog, ...blogs]);
+    // setWorks([newBlog, ...blogs]);
 
     createWork(newWork);
     setView("list");
@@ -110,7 +110,7 @@ export default function BlogDashboard() {
       if (data.success) {
         toast.success("Work updated successfully!");
         fetchWorks();
-        // setBlogs((prevBlogs) =>
+        // setWorks((prevBlogs) =>
         //   prevBlogs.map((blog) =>
         //     blog.id === currentWork.id ? currentWork : blog
         //   )
@@ -138,7 +138,7 @@ export default function BlogDashboard() {
   const handleUpdateWork = () => {
     updateWork(currentWork);
 
-    // setBlogs(updatedWorks);
+    // setWorks(updatedWorks);
 
     setView("list");
     toast.success("Blog updated successfully!");
@@ -156,7 +156,7 @@ export default function BlogDashboard() {
       const data = await response.json();
       if (data.success) {
         toast.success("Work deleted successfully!");
-        // setBlogs((prevBlogs) => prevBlogs.filter((blog) => blog.id !== id));
+        // setWorks((prevBlogs) => prevBlogs.filter((blog) => blog.id !== id));
         fetchWorks();
       } else {
         toast.error("Failed to delete work");
@@ -173,7 +173,7 @@ export default function BlogDashboard() {
 
     deleteWork(id);
 
-    // setBlogs(updatedWorks);
+    // setWorks(updatedWorks);
     toast.success("Blog deleted successfully!");
   };
 
@@ -208,7 +208,7 @@ export default function BlogDashboard() {
   };
 
   // Filter blogs based on search query
-  const filteredWorks = blogs.filter(
+  const filteredWorks = works.filter(
     (blog) =>
       blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       blog.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -398,7 +398,7 @@ export default function BlogDashboard() {
               <div className="text-center py-12">
                 <FileText size={48} className="mx-auto text-gray-400 mb-4" />
                 <h3 className="text-xl font-medium text-gray-600 dark:text-gray-400">
-                  No blogs found
+                  No works found
                 </h3>
                 <p className="text-gray-500 dark:text-gray-500 mt-2">
                   {searchQuery

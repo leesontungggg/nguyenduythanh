@@ -5,7 +5,7 @@ export default function News() {
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <main className="flex-1">
-        <section className="relative h-screen bg-[url('/hero.jpg')] bg-fixed bg-cover bg-center flex items-center justify-center text-white uppercase md:text-5xl text-3xl font-bold">
+        <section className="relative h-screen bg-[url('/hero.jpg')] bg-fixed bg-cover bg-[position:75%_0%] md:bg-center flex items-center justify-center text-white uppercase md:text-5xl text-3xl font-bold">
           News
         </section>
         <section className="py-20 px-4">

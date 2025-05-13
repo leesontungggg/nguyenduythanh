@@ -30,7 +30,7 @@ export default function NilsFrahmHomepage() {
 
       {/* Main Content */}
       <main className="flex-1">
-        <section className="relative h-screen bg-[url('/hero.jpg')] bg-fixed bg-cover bg-center"></section>
+        <section className="relative h-screen bg-[url('/hero.jpg')] bg-fixed bg-cover bg-[position:75%_0%] md:bg-center"></section>
 
         {/* Latest Releases */}
         {/* <section className="py-20 px-4">
