@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { X, Calendar } from "lucide-react";
 
-export default function About() {
+export default function Works() {
   const [works, setWorks] = useState<Work[]>([]);
   const [view, setView] = useState<"list" | "preview">("list");
   const [currentWork, setCurrentWork] = useState<Work | null>(null);
